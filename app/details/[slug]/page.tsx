@@ -5,7 +5,13 @@ import { useState, useEffect } from 'react'
 import { DataCard } from '../../components/DataCard';
 import { RestObject } from '../../types';
 
-export default function Page({ params }: Record<string, Record<string, string>>) {
+interface DetailsPageParams {
+  params: {
+    slug: string;
+  }
+}
+
+export default function Page({ params }: DetailsPageParams) {
   const [isLoading, setLoading] = useState<boolean>(true)
   const [rObject, setRObject] = useState<RestObject | null>(null)
 
