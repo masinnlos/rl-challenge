@@ -16,7 +16,6 @@ function RootLayout({ children }: RootLayoutProps) {
       <body className={inter.className}>
         <StyledComponentsRegistry>
           <LoadingProvider>
-          <Header>haha</Header>
           <div style={{ padding: '50px', display: 'flex', justifyContent: 'center' }}>
             {children}
             </div>
